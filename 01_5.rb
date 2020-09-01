@@ -1,3 +1,4 @@
+#encoding: utf-8
 puts <<~TEXT
        旅行プランを選択してください
        1.沖縄旅行(¥10000)
@@ -54,3 +55,25 @@ puts "合計料金: ¥#{total_price}"
 # elsif plan_num == 3
 #   puts "合計料金:¥#{people * 15000}"
 # end
+
+puts <<~TEXT
+       旅行プランを選択してください
+       1.沖縄旅行(¥10000)
+       2.北海道旅行(¥20000)
+       3.九州旅行(¥15000)
+     TEXT
+
+print "プランを選択 > "
+
+plan_num = gets.to_i
+
+case plan_num
+when 1
+  place = "沖縄"
+when 2
+  place = "北海道"
+when 3
+  place = "九州"
+end
+
+puts "#{place}旅行ですね、何人でいきますか？"
