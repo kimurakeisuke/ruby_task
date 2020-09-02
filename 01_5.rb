@@ -58,9 +58,10 @@ puts "合計料金: ¥#{total_price}"
 
 puts <<~TEXT
        旅行プランを選択してください
-       1.沖縄旅行(¥10000)
-       2.北海道旅行(¥20000)
-       3.九州旅行(¥15000)
+       1. 沖縄旅行（¥10000）
+       2. 北海道旅行（¥20000）
+       3. 九州旅行（¥15000）
+
      TEXT
 
 print "プランを選択 > "
@@ -76,4 +77,19 @@ when 3
   place = "九州"
 end
 
-puts "#{place}旅行ですね、何人でいきますか？"
+puts "#{place}旅行ですね。何人でいきますか？"
+
+print "人数を入力 > "
+
+people = gets.to_i
+
+case people
+when 1
+  total_price = people * 10000
+when 2
+  total_price = people * 20000
+when 3
+  total_price = people * 15000
+end
+
+puts "合計金額は:¥#{total_price}"

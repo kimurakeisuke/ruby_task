@@ -12,18 +12,4 @@ input = gets.to_i
 
 puts "合計料金: ¥#{price * input}"
 
-price = 4000
 
-print "人数を入力してください"
-
-input = gets.to_i
-
-puts "合計料金: ¥#{price * input}"
-
-price = 10000
-
-print "人数を入力して下さい"
-
-input = gets.to_i
-
-puts "合計料金: ¥#{price * input}"
